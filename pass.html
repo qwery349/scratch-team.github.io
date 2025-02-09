@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Авторизация</title>
+  </head>
+  <body>
+    <center>
+      <h1>Вход</h1>
+      <form>
+        <input type="text" id="code" placeholder="Ввести код">
+        <button type="button" onclick="checkCode()">Отправить форму</button>
+      </form>
+      <div id="result"></div>
+      <script>
+        function checkCode() {
+          var code = document.getElementById("code").value;
+          if (code == "123456") {
+            window.location.href = "main_page.html";
+          } else {
+            document.getElementById("result").innerHTML = "Неправильный код!";
+          }
+        }
+      </script>
+    </center>
+  </body>
+</html>
